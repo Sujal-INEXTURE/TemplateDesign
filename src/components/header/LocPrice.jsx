@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const LocPrice = () => {
   return (
-    <div className="flex items-center justify-end gap-4 w-full">
+    <div className="flex items-center justify-end gap-4 w-full sm:mt-2 md:mt-2">
       {/* Location */}
       <div className="flex items-center gap-2 group cursor-pointer">
         <Icon icon="ph:map-pin" className="group-hover:text-primary-color" />

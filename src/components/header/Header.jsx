@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <>
       <div className="border">
-        <div className="container mx-auto py-6 px-36 ">
-          <div className="flex md:flex-wrap lg:flex-nowrap  items-center justify-between w-full   ">
+        <div className="container mx-auto py-5 px-32 ">
+          <div className="flex xs:flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap xl:flex-nowrap  items-center justify-between w-full   ">
             <LogoSearch />
             <LocPrice />
           </div>

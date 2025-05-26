@@ -1,6 +1,7 @@
 export const menuOptions = [
   {
     name: "Home",
+    withArrow: true,
     options: [
       {
         name: "Home Default",

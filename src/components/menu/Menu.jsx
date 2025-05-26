@@ -6,9 +6,9 @@ const Menu = () => {
   return (
     <>
       <div className="border">
-        <div className="container mx-auto py-2 px-36 ">
+        <div className="container mx-auto py-2 px-32 ">
           <div className="flex md:flex-wrap items-center w-full gap-5">
-            <button className="bg-primary-color flex items-center gap-3 text-white px-4 py-2 rounded-md mr-4">
+            <button className="bg-primary-color flex items-center gap-3 text-white px-4 py-2 rounded-md ">
               <Icon
                 icon="ri:menu-2-line"
                 width="15"
@@ -20,16 +20,18 @@ const Menu = () => {
 
             {menuOptions.map((item, index) => (
               <div key={index} className="relative group cursor-pointer">
-                <p className="hover:text-primary-color flex items-center font-medium">
+                <p className="hover:text-primary-color text-gray-700 flex items-center font-medium">
                   {item.name}
-                  {item?.options && item?.options?.length > 0 && (
-                    <Icon
-                      icon="solar:alt-arrow-down-outline"
-                      width="15"
-                      height="15"
-                      className="ml-2"
-                    />
-                  )}
+                  {item?.options &&
+                    item?.options?.length > 0 &&
+                    item.withArrow && (
+                      <Icon
+                        icon="iconoir:nav-arrow-down"
+                        width="15"
+                        height="15"
+                        className="ml-2"
+                      />
+                    )}
                 </p>
 
                 {/* Dropdown if options exist */}
@@ -43,7 +45,7 @@ const Menu = () => {
                         <li key={idx}>
                           <a
                             href={opt.link}
-                            className="block py-1 px-2 text-gray-700 hover:text-primary-color hover:bg-gray-100 rounded"
+                            className="block py-1 px-2 text-gray-700 hover:text-primary-color"
                           >
                             {opt.name}
                           </a>

@@ -6,9 +6,6 @@ const LogoSearch = () => {
     <div className="flex items-center w-full gap-4 ">
       <img src={Logo} alt="logo" className="src" />
       <form className="max-w-lg w-full">
-        <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
-          Search
-        </label>
         <div className="relative">
           <input
             type="search"
