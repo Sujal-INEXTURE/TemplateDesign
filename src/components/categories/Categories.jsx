@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import { categoriesData } from "./categoriesData";
 
-const CateCarousel = () => {
+const Categories = () => {
   const scrollRef = useRef(null);
   const [direction, setDirection] = useState("right");
 
@@ -31,9 +31,9 @@ const CateCarousel = () => {
   }, [direction]);
 
   return (
-    <div className="w-full">
+    <div className="w-full  mt-7">
       {/* Header with controls */}
-      <div className="flex items-center justify-between py-6">
+      <div className="flex items-center justify-between py-8">
         <div className="flex items-center">
           <Icon
             icon="charm:stack"
@@ -81,7 +81,7 @@ const CateCarousel = () => {
       {/* Scrollable Cards */}
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto gap-4 mt-3  transition-all duration-300 ease-in-out"
+        className="flex overflow-x-auto gap-4   transition-all duration-300 ease-in-out"
       >
         {categoriesData.map((category, index) => (
           <div
@@ -102,8 +102,9 @@ const CateCarousel = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };
 
-export default CateCarousel;
+export default Categories;
